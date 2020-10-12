@@ -85,7 +85,7 @@
                       <img src="assets/product/{{product.product_image}}" style="width:250px; height:300px;" class="img-responsive" alt="a" />
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#" [routerLink]="['/product/detail',product.product_id]" ><i class="fa fa-retweet"></i></a></li>
                             <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                         </ul>
                     </div>

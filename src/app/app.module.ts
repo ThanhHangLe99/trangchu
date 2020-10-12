@@ -1,3 +1,4 @@
+import { DetailComponent } from './product/detail/detail.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -22,6 +23,7 @@ import { HeaderComponent } from './shared/header/header.component';
     HeaderComponent,
     MainComponent,
     FooterComponent,
+
   ],
   imports: [
     BrowserModule,
