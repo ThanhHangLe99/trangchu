@@ -46,6 +46,10 @@ const routes: Routes = [
     path: 'list',
     component: ListComponent,
   },
+     {
+    path: 'list',
+    component: ListComponent,
+  },
    {
     path: '**',
     component: NotFoundComponent,

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListComponent } from './list/list.component';
+//import { ListBrandComponent } from './list-brand/list-brand.component';
 // import { ListBrandComponent } from './list-brand/list-brand.component';
 
 
