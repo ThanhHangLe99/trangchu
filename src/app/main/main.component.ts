@@ -11,12 +11,16 @@ import 'rxjs/add/operator/takeUntil';
 })
 export class MainComponent extends BaseComponent implements OnInit {
   list_item:any;
+  menus:any;
 
   constructor(injector: Injector) {
     super(injector);
    }
 
   ngOnInit(): void {
+    // this._api.get('/api/category/get-category').takeUntil(this.unsubscribe).subscribe(res => {
+    //   this.menus = res;
+    // });
     let elem = document.getElementsByClassName("script");
     for(var i = elem.length -1; 0 <= i; i--) {
       elem[i].remove();

@@ -1,3 +1,4 @@
+import { ListComponent } from './product/list/list.component';
 import { DetailComponent } from './product/detail/detail.component';
 import { MainComponent } from './main/main.component';
 import { Component, NgModule } from '@angular/core';
@@ -41,6 +42,10 @@ const routes: Routes = [
      path: 'login',
      component: LoginComponent,
    },
+   {
+    path: 'list',
+    component: ListComponent,
+  },
    {
     path: '**',
     component: NotFoundComponent,

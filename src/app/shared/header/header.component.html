@@ -38,20 +38,24 @@
               <nav class="header__menu">
                   <ul>
                       <li class="active"><a href="./index.html">Trang chủ</a></li>
-                      <li><a href="./shop-grid.html">Sản phẩm</a>
+                      <ng-container *ngFor="let mn of menus">
+                      <li *ngIf="mn.children !=null"><a routerLink="/list"><span>{{mn.category_name}}</span></a>
                         <ul class="header__menu__dropdown">
-                          <li><a href="#">Quần</a></li>
-                          <li><a href="#">Áo</a></li>
-                          <li><a href="#">Váy</a></li>
+                          <ng-container *ngFor="let m of mn.children">
+                            <li><a [routerLink]="['/product/list',m.category_id]">{{m.category_name}}</a></li>
+                          </ng-container>
                       </ul>
                       </li>
-                      <li><a href="#">Thương hiệu</a>
+                    </ng-container>
+                    <ng-container *ngFor="let mn of menus1">
+                      <li *ngIf="mn.children !=null" ><a routerLink="/list"><span>{{mn.brand_name}}</span></a>
                           <ul class="header__menu__dropdown">
-                              <li><a href="#">Chanel</a></li>
-                              <li><a href="#">LV</a></li>
-                              <li><a href="#">YODY</a></li>
+                            <ng-container *ngFor="let m of mn.children">
+                              <li><a [routerLink]="['/product/list',m.brand_id]">{{m.brand_name}}</a></li>
+                            </ng-container>
                           </ul>
                       </li>
+                    </ng-container>
                       <li><a href="./blog.html">Tổng đài</a></li>
                   </ul>
               </nav>
