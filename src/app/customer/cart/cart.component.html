@@ -1,1 +1,67 @@
-<p>cart works!</p>
+ <!-- Shoping Cart Section Begin -->
+ <section class="shoping-cart spad">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="shoping__cart__table">
+                  <table>
+                      <thead>
+                          <tr>
+                              <th class="shoping__product">Tên sản phẩm</th>
+                              <th colspan="1" class="a-center"><span class="nobr">Giá</span></th>
+                              <th class="a-center" rowspan="1">Số lượng</th>
+                              <th colspan="1" class="a-center">Tổng tiền</th>
+                              <th class="a-center" rowspan="1">&nbsp;</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let c of items">
+                              <td class="shoping__cart__item">
+                                  <img src="assets/product/{{c.product_image}}" style="width: 300px; height: 300px;" alt="">
+                                  <h5>{{c.product_name}}</h5>
+                              </td>
+                              <td class="shoping__cart__price">
+                                {{c.product_price}}
+                              </td>
+                              <td class="shoping__cart__quantity">
+                                  <div class="quantity">
+                                      <div class="pro-qty">
+                                        <input class="cary_quantity_input" name="qtybutton" #inp  min="1" max="100" (change)="addQty(c,inp.value)" [value]="c.quantity" type="number">
+
+                                      </div>
+                                  </div>
+                              </td>
+                              <td class="shoping__cart__total">
+                                {{total}}
+                              </td>
+                              <td class="shoping__cart__item__close">
+                                  <span class="icon_close"></span>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="shoping__cart__btns">
+                  <a href="#" class="primary-btn cart-btn">Tiếp tục mua sắm</a>
+                  <a href="#" class="primary-btn cart-btn cart-btn-right"><span class="icon_loading"></span>
+                      Cập nhật giỏ hàng</a>
+              </div>
+          </div>
+          <div class="col-lg-6">
+              <div class="shoping__checkout">
+                  <h5>Cart Total</h5>
+                  <ul>
+                      <!-- <li>Subtotal <span>$454.98</span></li> -->
+                      <li>Total <span>{{total}}</span></li>
+                  </ul>
+                  <a href="#" class="primary-btn">TIẾN HÀNH KIỂM TRA</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Shoping Cart Section End -->
