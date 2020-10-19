@@ -43,10 +43,10 @@
     </div>
       <div class="row featured__filter">
         <ng-container *ngFor="let new of   list_item_new">
-          <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+          <div class="col-lg-2 col-md-4 col-sm-6 mix oranges fresh-meat">
               <div class="featured__item">
                   <div class="featured__item__pic set-bg" data-setbg="">
-                    <img src="assets/product/{{new.product_image}}" [routerLink]="['/product/detail',new.product_id]" style="width:250px; height:300px;" class="img-responsive" alt="a" />
+                    <img src="assets/product/{{new.product_image}}" [routerLink]="['/product/detail',new.product_id]" style="width:250px; height:250px;" class="img-responsive" alt="a" />
                       <ul class="featured__item__pic__hover">
                           <li><a href="#"><i class="fa fa-heart"></i></a></li>
                           <li><a (click)="addToCart(new)"><i class="fa fa-shopping-cart"></i></a></li>
@@ -54,7 +54,7 @@
                   </div>
                   <div class="featured__item__text">
                       <h6><a [routerLink]="['/product/detail',new.product_id]" >{{new.product_name}}</a></h6>
-                      <h5>{{new.product_price}} VND</h5>
+                      <h5>{{new.product_price }} VND</h5>
                   </div>
               </div>
           </div>
@@ -78,7 +78,7 @@
                       <img src="assets/product/{{product.product_image}}" [routerLink]="['/product/detail',product.product_id]" style="width:250px; height:300px;" class="img-responsive" alt="a" />
                         <ul class="featured__item__pic__hover">
                             <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            <li><a (click)="addToCart(product)" ><i class="fa fa-shopping-cart"></i></a></li>
                         </ul>
                     </div>
                     <div class="featured__item__text">

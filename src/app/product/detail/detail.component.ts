@@ -9,6 +9,7 @@ import { BaseComponent } from '../../lib/base-component';
 })
 export class DetailComponent extends BaseComponent implements OnInit {
   item:any;
+  tuongtu:any;
 
   constructor(injector: Injector) {
     super(injector);
@@ -24,6 +25,11 @@ export class DetailComponent extends BaseComponent implements OnInit {
         });
       });
     });
+    this._route.params.subscribe(params => {
+      let id = params['id'];
+      this._api.get('/api/product/get-tuongtu/'+id).takeUntil(this.unsubscribe).subscribe(res => {
+        this.tuongtu = res;});
+      });
   }
   addToCart(it) {
     this._cart.addToCart(it);
