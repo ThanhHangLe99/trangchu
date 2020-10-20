@@ -89,6 +89,9 @@
             </div>
           </ng-container>
         </div>
+        <div>
+        <ngb-pagination style="float: right;" [collectionSize]="list_item[0].total" [pageSize]="size" [(page)]="index" [maxSize]="10" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+      </div>
     </div>
 </section>
 <!-- Featured Section End -->

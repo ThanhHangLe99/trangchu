@@ -13,6 +13,7 @@ import { CartComponent } from './customer/cart/cart.component';
 import { CheckoutComponent } from './customer/checkout/checkout.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -31,6 +32,7 @@ import { HeaderComponent } from './shared/header/header.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgbModule,
 
   ],
   providers: [],
