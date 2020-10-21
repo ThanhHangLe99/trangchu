@@ -48,10 +48,10 @@
                       </li>
                     </ng-container>
                     <ng-container *ngFor="let mn of menus1">
-                      <li *ngIf="mn.children !=null" ><a routerLink="/list"><span>{{mn.brand_name}}</span></a>
+                      <li *ngIf="mn.children !=null" ><a routerLink=""><span>{{mn.brand_name}}</span></a>
                           <ul class="header__menu__dropdown">
                             <ng-container *ngFor="let m of mn.children">
-                              <li><a [routerLink]="['/product/list',m.brand_id]">{{m.brand_name}}</a></li>
+                              <li><a [routerLink] = "['/product/list-brand',m.brand_id]">{{m.brand_name}}</a></li>
                             </ng-container>
                           </ul>
                       </li>
