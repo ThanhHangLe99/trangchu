@@ -26,7 +26,7 @@ export class MainComponent extends BaseComponent implements OnInit {
     // });
     this.list_item=[];
     this.index=1;
-    this.size=4;
+    this.size=8;
     let elem = document.getElementsByClassName("script");
     for(var i = elem.length -1; 0 <= i; i--) {
       elem[i].remove();

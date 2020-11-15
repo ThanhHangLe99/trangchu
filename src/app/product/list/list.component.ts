@@ -21,7 +21,7 @@ export class ListComponent extends BaseComponent implements OnInit {
   ngOnInit(): void {
     this.list = [];
     this.page = 1;
-    this.pageSize = 5;
+    this.pageSize = 12;
     this._route.params.subscribe(params => {
       this.category_id = params['id'];
       this._api.post('/api/product/search', {

@@ -23,7 +23,7 @@
                       </div>
                       <div class="product__details__price">{{item.product_price}} VND</div>
                       <p>{{item.product_desc}}</p>
-                      <a href="#" class="primary-btn">ADD TO CARD</a>
+                      <a href="#" (click)="addToCart(item)" class="primary-btn">ADD TO CARD</a>
 
                   </div>
               </div>
@@ -32,7 +32,8 @@
                       <ul class="nav nav-tabs" role="tablist">
                           <li class="nav-item">
                               <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
-                                  aria-selected="true">{{item.product_content}}</a>
+                                  aria-selected="true">Nội Dung</a>
+                                  <p>{{item.product_content}}</p>
                           </li>
                           <!-- <li class="nav-item">
                               <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
