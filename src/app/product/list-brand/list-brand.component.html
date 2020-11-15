@@ -21,9 +21,11 @@
                 </div>
                 </ng-container>
               </div>
+              <ngb-pagination style="float: right;" [collectionSize]="totalItems" [pageSize]="pageSize" [(page)]="page" [maxSize]="10" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
           </div>
       </div>
   </div>
 </section>
+
 
 

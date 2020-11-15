@@ -4,7 +4,6 @@
           <div class="col-lg-12 col-md-7">
               <div class="row">
                 <ng-container *ngFor="let item of list">
-
                   <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
                         <div class="product__item__pic set-bg"  [routerLink]="['/product/detail',item.product_id]" data-setbg="assets/product/{{item.product_image}}"  style="background-image: url(&quot;assets/product/{{item.product_image}}&quot;);">
@@ -21,10 +20,11 @@
                 </div>
                 </ng-container>
               </div>
+              <ngb-pagination style="float: right;" [collectionSize]="totalItems" [pageSize]="pageSize" [(page)]="page" [maxSize]="10" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
           </div>
-
       </div>
   </div>
 </section>
+
 
 
