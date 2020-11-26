@@ -12,6 +12,7 @@ import 'rxjs/add/operator/takeUntil';
 export class MainComponent extends BaseComponent implements OnInit {
   list_item:any;
   list_item_new:any;
+  list_item_banchay:any;
   index:any;
   size:any;
   //menus:any;
@@ -42,6 +43,12 @@ export class MainComponent extends BaseComponent implements OnInit {
       this._api.get('/api/product/get-new'),
     ).takeUntil(this.unsubscribe).subscribe(res => {
       this.list_item_new = res[0];
+    }, err => {});
+
+    Observable.combineLatest(
+      this._api.get('/api/product/get-banchay'),
+    ).takeUntil(this.unsubscribe).subscribe(res => {
+      this.list_item_banchay = res[0];
     }, err => {});
 
   }
