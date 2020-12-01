@@ -21,6 +21,8 @@ export class CartComponent extends BaseComponent implements OnInit {
       for(let x of this.items){
         x.money = x.quantity * x.product_price;
         this.total += x.quantity * x.product_price;
+        if(x.quantity==0)
+        return this._cart.clearCart();
       }
     });
   }

@@ -26,7 +26,7 @@
                               <td class="shoping__cart__quantity">
                                   <div class="quantity">
                                       <div class="pro-qty">
-                                        <input class="cary_quantity_input" name="qtybutton" #inp  min="1" max="100" (change)="addQty(c,inp.value)" [value]="c.quantity" type="number">
+                                        <input class="cary_quantity_input" name="qtybutton" #inp  min="0" max="100" (change)="addQty(c,inp.value)" [value]="c.quantity" type="number">
                                       </div>
                                   </div>
                               </td>
