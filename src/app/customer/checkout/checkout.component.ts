@@ -40,8 +40,5 @@ export class CheckoutComponent extends BaseComponent implements OnInit {
         this.total += x.quantity * x.product_price;
       }
     });
-
   }
-
-
 }

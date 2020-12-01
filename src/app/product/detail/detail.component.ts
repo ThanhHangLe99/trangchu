@@ -11,6 +11,7 @@ export class DetailComponent extends BaseComponent implements OnInit {
   item:any;
   tuongtu:any;
 
+
   constructor(injector: Injector) {
     super(injector);
   }

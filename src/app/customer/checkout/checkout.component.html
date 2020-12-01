@@ -1,34 +1,38 @@
 <div class="container">
-  <form [formGroup]="orderForm" (ngSubmit)="onSubmit(orderForm.value)">
+ <form [formGroup]="orderForm" (ngSubmit)="onSubmit(orderForm.value)">
   <div class="checkout__form">
-    <h4>Checkout</h4>
+    <h4>Thanh Toán</h4>
     <!-- <form action="#"> -->
         <div class="row">
             <div class="col-lg-8 col-md-6">
               <div class="checkout__input">
                 <p>Họ và tên<span>*</span></p>
                 <input type="text" placeholder="Họ và tên" formControlName="ho_ten" class="checkout__input__add">
+                <span class="col alert alert-danger" role="alert"
+                   *ngIf="(orderForm.controls.ho_ten.errors?.required
+                           && orderForm.controls.ho_ten.touched) && orderForm.controls.ho_ten.touched" >
+                           Họ và tên không được để trống!
+                 </span>
               </div>
                 <div class="checkout__input">
                     <p>Địa chỉ<span>*</span></p>
-                    <input type="text" placeholder="Street Address" formControlName="dia_chi" class="checkout__input__add">
+                    <input type="text" placeholder="Địa chỉ" formControlName="dia_chi" class="checkout__input__add">
+                    <span class="col alert alert-danger" role="alert"
+                    *ngIf="(orderForm.controls.dia_chi.errors?.required
+                            && orderForm.controls.dia_chi.touched) && orderForm.controls.dia_chi.touched" >
+                            Địa chỉ không được để trống!
+                    </span>
                 </div>
                 <div class="checkout__input">
                   <p>Số điện thoại<span>*</span></p>
                   <input type="text" placeholder="Số điện thoại" formControlName="sdt" class="checkout__input__add">
-              </div>
-                <!-- <div class="checkout__input__checkbox">
-                    <label for="diff-acc">
-                        Gửi tới một địa chỉ khác?
-                        <input type="checkbox" id="diff-acc">
-                        <span class="checkmark"></span>
-                    </label>
+                  <span class="col alert alert-danger" role="alert"
+                  *ngIf="(orderForm.controls.sdt.errors?.required
+                          && orderForm.controls.sdt.touched) && orderForm.controls.sdt.touched" >
+                          Số điện thoại không được để trống!
+                  </span>
                 </div>
-                <div class="checkout__input">
-                    <p>Ghi chú đặt hàng<span>*</span></p>
-                    <input type="text"
-                        placeholder="Notes about your order, e.g. special notes for delivery.">
-                </div> -->
+
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="checkout__order">
@@ -47,6 +51,6 @@
         </div>
     <!-- </form> -->
   </div>
-</form>
-  </div>
+ </form>
+</div>
 

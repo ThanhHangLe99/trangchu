@@ -14,6 +14,7 @@ import { CheckoutComponent } from './customer/checkout/checkout.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+//import { BlogComponent } from './header/blog/blog.component';
 
 
 
@@ -24,6 +25,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     MainComponent,
     FooterComponent,
+    //BlogComponent,
 
   ],
   imports: [

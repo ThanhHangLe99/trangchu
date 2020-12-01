@@ -1,3 +1,4 @@
+
 import { ListComponent } from './product/list/list.component';
 import { DetailComponent } from './product/detail/detail.component';
 import { MainComponent } from './main/main.component';
@@ -18,6 +19,10 @@ const routes: Routes = [
     loadChildren: () => import('./customer/customer.module').then((m) => m.CustomerModule),
   },
 
+  {
+    path: 'blog',
+    loadChildren: () => import('./shared/header/blog/blog.module').then((m) => m.BlogModule),
+  },
   {
     path: 'home',
     loadChildren: () => import('./main/main.module').then((m) => m.MainModule),
